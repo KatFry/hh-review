@@ -37,3 +37,23 @@ console.log(mergeNoDupes([6, 7, 8], [7, 8, 9])) // -> [6, 7, 8, 9] */
 
 
 /* OPTION 2: using a set */
+const mergeNoDupes2 = (...arrays) => {
+  // declare a constant assigned to creating a new set 
+  const unique = new Set(); 
+  // loop over the array of arrays 
+  for (const arr of arrays) {
+    // loop over individual elements 
+    for (const el of arr) {
+      // use the .add() method on set - will only add unique values 
+      unique.add(el);
+    }
+  }
+  // return an array of the unique values 
+  return [...unique];
+}
+
+/* //TESTS:
+console.log(mergeNoDupes2([1, 3, 7], [2, 3, 9], [9, 13])) // -> [1, 3, 7, 2, 9, 13]
+console.log(mergeNoDupes2([4, 3])) // -> [4, 3]
+console.log(mergeNoDupes2([6, 7, 8], [7, 8, 9])) // -> [6, 7, 8, 9]  */
+
