@@ -14,6 +14,8 @@ mergeNoDupes([6, 7, 8], [7, 8, 9]) -> [6, 7, 8, 9]
 // input: multiple arrays 
 // output: new array representing union of arrays without duplicates
 
+// adding comments to see if this fixes dev issue
+
 /* OPTION 1: more inelegant solution (naive approach) */
 const mergeNoDupes = (...arrays) => {
   // declare a constant unified initialized to an empty array 
