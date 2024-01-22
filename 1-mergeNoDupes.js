@@ -37,6 +37,10 @@ console.log(mergeNoDupes([6, 7, 8], [7, 8, 9])) // -> [6, 7, 8, 9] */
 
 
 /* OPTION 2: using a set */
+/* time complexity of this is still O(n), so a good option here!
+the nested for loop isn't too bad because set being used to store unique values,
+and O(n) where 'n' is the total number of elements across all arrays. */
+
 const mergeNoDupes2 = (...arrays) => {
   // declare a constant assigned to creating a new set 
   const unique = new Set(); 
