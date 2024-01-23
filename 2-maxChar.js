@@ -6,6 +6,8 @@ maxChar('good morning') -> 'o'
 maxChar('abbcc') -> 'b'
 */
 
+/* OPTION 1: most basic solution */
+
 // input: string
 // output: string
 const maxChar = char => {
@@ -29,15 +31,27 @@ const maxChar = char => {
 
   // destructure key/value pairs from count 
   for (let [key, value] of Object.entries(count)) {
-    
+    // if current val is greater than maxFrequency
+    if (value > maxFrequency) {
+      // reassign maxCharCandidate to current key
+      maxCharCandidate = key;
+      // reassign maxFrequency to current value
+      maxFrequency = value;
+    }
   }
-    
-  // return the value associated with the maxChar from the obj
-
+  // return maxCharCandidate
+  return maxCharCandidate;
 }
 
 /* //TESTS: 
 console.log(maxChar('good morning')); // -> 'o'
 console.log(maxChar('abbcc')); // -> 'b'
 console.log(maxChar(123445)); // -> 'parameter must be a string'
-*/
+ */
+
+
+/* OPTION 2: using a Map */
+
+const maxChar2 = char => {
+  
+}
