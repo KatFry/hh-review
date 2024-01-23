@@ -51,6 +51,11 @@ console.log(maxChar(123445)); // -> 'parameter must be a string'
 
 
 /* OPTION 2: using a Map */
+/* time complexity: overall n + m - n is string lenth, m is number of unique characters
+  - iterating over string: O(n) - linear, n is the length of the string 
+  - map operations: O(1) - generally constant on average
+  - finding max frequency: O(m) - linear, m signifies unique characters
+*/
 
 const maxChar2 = str => {
   // edge case - if the passed-in char isn't a string, return 'parameter must be a string'
