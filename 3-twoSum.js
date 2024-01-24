@@ -11,6 +11,23 @@ twoSum([2, 4, 5], 8) // -> false
 twoSum([5, -1, -2, 3], 1) // -> true, [2, 3]
 */
 
-const twoSum = (arr, target) => {
+/* OPTION 1: naive solution  */
+
+// input: array, target number
+// output: boolean 
+const twoSum1 = (arr, target) => {
   
+}
+
+/* OPTION 2: better solution */
+const twoSum2 = (arr, target) => {
+
+}
+
+
+/* OPTION 3: returning indices instead */
+// input: array, target number
+// output: array of indices of numbers that added to target number 
+const twoSum3 = (arr, target) => {
+
 }
