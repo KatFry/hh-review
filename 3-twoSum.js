@@ -38,7 +38,18 @@ console.log(twoSum1([5, -1, -2, 3], 1)); // -> true, [2, 3]
 
 /* OPTION 2: better solution - O(n) because it uses a set */
 const twoSum2 = (arr, target) => {
+  // initialize a new Set
 
+  // loop through each num in the array
+
+    // assign a constant complement to the target minus the current num you're checking
+
+    // if the set has the complement, return true (it will add up to the target) 
+
+    // add each num into the set 
+
+  // return false otherwise
+  
 }
 
 
