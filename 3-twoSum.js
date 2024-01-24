@@ -59,7 +59,7 @@ console.log(twoSum2([2, 4, 5], 8)); // -> false
 console.log(twoSum2([5, -1, -2, 3], 1)); // -> true, [2, 3]
  */
 
-/* OPTION 3: returning indices instead
+/* OPTION 3: returning indices instead, still O(n)
 this solution works, but a Map would be better to access indices directly (option 4) 
 */
 
@@ -88,7 +88,7 @@ console.log(twoSum3([5, -1, -2, 3], 1)); // -> [2, 3]
 */
 
 
-/* OPTION 4: using a Map to return indices instead */
+/* OPTION 4: using a Map to return indices instead, O(n) with more efficient lookup*/
 const twoSum4 = (arr, target) => {
   // initialize a new map
   const seen = new Map();
@@ -107,7 +107,7 @@ const twoSum4 = (arr, target) => {
 
 
 /* // TESTS: 
-console.log(twoSum4([2, 4, 5], 9)); // ->. [1, 2]
-console.log(twoSum4([2, 4, 5], 8)); // -> 'numbers summing to target not found'
+console.log(twoSum4([2, 4, 5], 9)); // -> [1, 2]
+console.log(twoSum4([2, 4, 5], 8)); // -> null
 console.log(twoSum4([5, -1, -2, 3], 1)); // -> [2, 3]
 */
