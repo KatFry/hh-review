@@ -11,7 +11,8 @@ twoSum([2, 4, 5], 8) // -> false
 twoSum([5, -1, -2, 3], 1) // -> true, [2, 3]
 */
 
-/* OPTION 1: naive solution - O(n^2)  */
+/* OPTION 1: naive solution - O(n^2) because of nested loops
+not a great solution with a large input array!  */
 
 // input: array, target number
 // output: boolean 
@@ -32,10 +33,10 @@ const twoSum1 = (arr, target) => {
 console.log(twoSum1([2, 4, 5], 9)); // -> true, [1, 2]
 console.log(twoSum1([2, 4, 5], 8)); // -> false 
 console.log(twoSum1([5, -1, -2, 3], 1)); // -> true, [2, 3]
- */
+*/
 
 
-/* OPTION 2: better solution */
+/* OPTION 2: better solution - O(n) because it uses a set */
 const twoSum2 = (arr, target) => {
 
 }
