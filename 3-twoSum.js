@@ -59,27 +59,48 @@ console.log(twoSum2([2, 4, 5], 8)); // -> false
 console.log(twoSum2([5, -1, -2, 3], 1)); // -> true, [2, 3]
  */
 
-/* OPTION 3: returning indices instead */
+/* OPTION 3: returning indices instead
+this solution works, but a Map would be better to access indices directly (option 4) 
+*/
+
 // input: array, target number
 // output: array of indices of numbers that added to target number 
 const twoSum3 = (arr, target) => {
   // initialize a new set 
-
+  const seen = new Set();
   // loop through each num in the array 
-
+  for (let i = 0; i < arr.length; i++) {
     // assign a constant complement to the target minus the current num (array[i])
-
-    // if the set has the complement, return the indices of the target numbers 
-
+    const complement = target - arr[i];
+    // if the set has the complement, return the indices of the complement and i  
+    if (seen.has(complement)) return [arr.indexOf(complement), i];
     // add each num to the set
-
+    seen.add(arr[i]);
+  }
   // return 'numbers summing to target not found' 
-
+  return 'numbers summing to target not found';
 }
-
 
 /* // TESTS: 
 console.log(twoSum3([2, 4, 5], 9)); // ->. [1, 2]
 console.log(twoSum3([2, 4, 5], 8)); // -> 'numbers summing to target not found'
 console.log(twoSum3([5, -1, -2, 3], 1)); // -> [2, 3]
- */
+*/
+
+
+/* OPTION 4: using a Map to return indices instead */
+const twoSum4 = (arr, target) => {
+  // initialize a new map
+  
+  // iterate over the array 
+
+    // declare the complement assigned to target minus the array at i 
+    
+}
+
+
+/* // TESTS: 
+console.log(twoSum4([2, 4, 5], 9)); // ->. [1, 2]
+console.log(twoSum4([2, 4, 5], 8)); // -> 'numbers summing to target not found'
+console.log(twoSum4([5, -1, -2, 3], 1)); // -> [2, 3]
+*/
