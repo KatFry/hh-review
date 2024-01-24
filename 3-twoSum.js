@@ -63,12 +63,23 @@ console.log(twoSum2([5, -1, -2, 3], 1)); // -> true, [2, 3]
 // input: array, target number
 // output: array of indices of numbers that added to target number 
 const twoSum3 = (arr, target) => {
+  // initialize a new set 
+
+  // loop through each num in the array 
+
+    // assign a constant complement to the target minus the current num (array[i])
+
+    // if the set has the complement, return the indices of the target numbers 
+
+    // add each num to the set
+
+  // return 'numbers summing to target not found' 
 
 }
 
 
 /* // TESTS: 
-console.log(twoSum3([2, 4, 5], 9)); // -> true, [1, 2]
-console.log(twoSum3([2, 4, 5], 8)); // -> false 
-console.log(twoSum3([5, -1, -2, 3], 1)); // -> true, [2, 3]
+console.log(twoSum3([2, 4, 5], 9)); // ->. [1, 2]
+console.log(twoSum3([2, 4, 5], 8)); // -> 'numbers summing to target not found'
+console.log(twoSum3([5, -1, -2, 3], 1)); // -> [2, 3]
  */
