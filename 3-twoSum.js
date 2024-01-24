@@ -91,11 +91,18 @@ console.log(twoSum3([5, -1, -2, 3], 1)); // -> [2, 3]
 /* OPTION 4: using a Map to return indices instead */
 const twoSum4 = (arr, target) => {
   // initialize a new map
-  
+  const seen = new Map();
   // iterate over the array 
-
+  for (let i = 0; i < arr.length; i++) {
     // declare the complement assigned to target minus the array at i 
-    
+    const complement = target - arr[i]; 
+    // if the map has the complement, return an array of the complement and i 
+    if (seen.has(complement)) return [seen.get(complement), i];
+    // set the key arr[i] in the map to the value of i 
+    seen.set(arr[i], i);
+  }
+  // return null otherwise 
+  return null; 
 }
 
 
